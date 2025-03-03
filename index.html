@@ -116,8 +116,20 @@
 💫 愿我们携手并肩，一起迎接未来的挑战与美好。</div> 
         <p><strong>亲爱的刘启航先生，一百天纪念日快乐！🎉</strong></p>
     </div>
-    <audio controls autoplay loop>
-            <source src="https://raw.githubusercontent.com/yana04152/100-days-love/main/2733335560.mp3" type="audio/mpeg">
+    <audio id="bg-music" controls loop>
+    你的浏览器不支持音频播放，请尝试使用其他设备。
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("bg-music");
+        audio.src = "https://raw.githubusercontent.com/yana04152/100-days-love/main/2733335560.mp3"; // 你的 GitHub 直链
+        audio.load(); // 加载音频
+        audio.play().catch(error => {
+            console.log("自动播放被浏览器禁止，需要用户点击播放", error);
+        });
+    });
+</script>
                     </audio>
     </div>
 
